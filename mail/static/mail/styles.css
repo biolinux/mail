@@ -1,3 +1,49 @@
+
+/* existing styles */
 textarea {
     min-height: 400px;
+}
+
+/* styles.css */
+/* Add Bootstrap classes to each email div */
+.email {
+  border: 1px solid black;
+  padding: 8px;
+  margin-bottom: 1px; /* Adjust as needed for spacing between emails */
+  position: relative; /* Position the email container relative */
+}
+
+.email .timestamp {
+  position: absolute; /* Position the timestamp absolutely */
+  top: 8px; /* Adjust as needed */
+  right: 8px; /* Adjust as needed */
+  color: gray; /* Set the color to gray */
+}
+/* styles.css */
+.email-details {
+  margin: 20px;
+}
+
+.gray-line {
+  border-top: 1px solid lightgray;
+}
+
+.email-body {
+  margin-bottom: 20px;
+}
+
+/* styles.css */
+.reply-button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reply-button:hover {
+  background-color: #007bff;
+  color: #fff;
 }

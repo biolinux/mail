@@ -177,3 +177,14 @@ def register(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "mail/register.html")
+    
+
+def inbox_email_count(request):
+    # Get the currently logged-in user
+    user = request.user
+
+    # Count the number of emails in the inbox for the current user
+    inbox_count = Email.objects.filter(user=user, archived=False).count()
+
+    # Return the count as JSON response
+    return JsonResponse({'count': inbox_count})
